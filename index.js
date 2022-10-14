@@ -13,11 +13,12 @@ let nombre = prompt('Dijite su nombre de jugador')
 switch (n)
 {
     case 1:
-        alert(nombre + ': Piedra');         
+        alert(nombre + ' : Piedra');         
         switch(pc)
         {
             case 1:
                 alert('pc: Piedra');
+                break;
             case 2:
                 alert('pc: Papel');
                 break;
@@ -25,15 +26,16 @@ switch (n)
                 alert('pc: Tijera');
                 break;
         }
-        document.write('Bien jugado')
+       
         break;
     case 2:
         alert(nombre +': Papel');
-        Math.random(1,2,3);
+        
         switch(pc)
         {
             case 1:
                 alert('pc: Piedra');
+                break;
             case 2:
                 alert('pc: Papel');
                 break;
@@ -41,16 +43,16 @@ switch (n)
                 alert('pc: Tijera');
                 break;
         }
-        document.write('Bien jugado')
+        
         break;        
     case 3:
-        alert(nombre + ': Tijera') ;
-        Math.random(1,2,3);
+        alert(nombre + ': Tijera') ;       
 
         switch(pc)
         {
             case 1:
                 alert('pc: Piedra');
+                break;
             case 2:
                 alert('pc: Papel ');
                 break;
@@ -58,8 +60,23 @@ switch (n)
                 alert('pc: Tijera');
                 break;
         }
-        document.write('Bien jugado')
+        
         break;        
     default:
         alert('PIERDES');
+}
+
+if (n == pc)
+{
+    document.write('\n Empate');
+}
+
+else if ((n == 1 && pc == 3) || (n == 2 && pc == 1 )|| (n==3  && pc== 1))
+{
+    document.write('Bien jugado \n');
+    document.write('\n Ganaste');
+}
+else
+{
+    document.write('\n Perdiste');
 }
